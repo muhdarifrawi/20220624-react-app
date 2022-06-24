@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react"; // equivalent: const React = require('react')
+import logo from "./logo.svg";
 
-function App() {
+// Create a React component
+function App(){
+  // A React app must always return JSX
+  // only one parent is allowed (use React.Fragment for an invisible div)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <React.Fragment>
+      <h1>test</h1>
+      <p>React don't allow multiple parents.</p>
+      <p>It must be wrapped in a div or an inivisible div like React.Fragment</p>
+      <img src={logo}/>
+    </React.Fragment>
+    
+  )
 }
 
-export default App;
+// must export out the component
+export default App; // equivalent: module.export = App.js; 
